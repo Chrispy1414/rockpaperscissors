@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let playerScore = 0
+     let compScore = 0
+     let result = ''
+        // Gets choice for computer
+        function getComputerChoice(){
+            let answers = ['rock','paper','scissors'];
+            let randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+            return randomAnswer;
+            // console.log(randomAnswer);
+        }
+        
+        //conditionals
+        function playRound(playerChoice, computerChoice){
+           var playerChoice = prompt('Pick Rock, Paper, Scissors');
+           playerChoice = playerChoice.toLowerCase();
+           var computerChoice = getComputerChoice();
+           if (playerChoice == computerChoice){
+            result = ('Its a tie.');
+            return result;
+           }else if(playerChoice == 'paper' && computerChoice == 'scissors'){
+            ++compScore;
+            result = ('Scissors beats paper! You lose');
+            return result;
+           }else if(playerChoice == 'paper' && computerChoice == 'rock'){
+            ++playerScore;
+            result = ('You Win! Paper beats rock.');
+            return  result;
+           }else if(playerChoice == 'rock' && computerChoice == 'paper'){
+            ++compScore;
+            result = ('Paper beats Rock! You lose');
+            return result;
+           }else if(playerChoice == 'rock' && computerChoice == 'scissors'){
+            ++playerScore;
+            result = ('You win! Rock beats scissors.');
+            return result;
+           }else if(playerChoice == 'scissors' && computerChoice == 'rock'){
+            ++compScore;
+            result = ('Rock beats Scissors! You lose');
+            return result;
+           }else if(playerChoice == 'scissors' && computerChoice == 'paper'){
+            ++playerScore;
+            result = ('You Win! Scissors beats Paper');
+            return result;
+           }
+        }
+        
+
+        function game(){
+            for (let i = 1; i <=5; ++i){
+                if(true){
+                playRound();
+                console.log(result);
+                console.log(playerScore, compScore);    
+        }
+        }
+    }
+        
+    </script>
+</body>
+</html>
