@@ -1,0 +1,76 @@
+/* CSS */
+body{
+    margin: 0;
+    background-color: #0d0e0d;
+}
+
+
+
+.scores{
+    color: #8d9693;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.displayContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 20px;
+    color: #a5a5a5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    margin-bottom: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 200px;
+}
+
+
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid rgb(87, 85, 85);
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(87, 156, 156, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #046745;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}

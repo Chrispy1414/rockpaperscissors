@@ -18,9 +18,11 @@ const playerScoreHeader = document.createElement('h1');
 const compScoreHeader = document.createElement('h1');
 const resultDisplayHeader = document.createElement('h1');
 playerScoreHeader.setAttribute('id', 'scoreHeader');
-displayPlayerScore.classList.add('Scores');
-playerScoreHeader.textContent = 'PlayerScore';
-compScoreHeader.textContent = 'CompScore';
+displayPlayerScore.classList.add('scores');
+displayCompScore.classList.add('scores');
+displayResultDisplay.classList.add('scores');
+playerScoreHeader.textContent = 'Player Score';
+compScoreHeader.textContent = 'Comp Score';
 resultDisplayHeader.textContent = 'Round Result';
 displayPlayerScore.textContent = playerScore;
 displayCompScore.textContent = compScore;
@@ -33,7 +35,7 @@ userScoreDisplay.appendChild(displayPlayerScore);
 compScoreDisplay.appendChild(compScoreHeader);
 compScoreDisplay.appendChild(displayCompScore);
 resultHeader.appendChild(resultDisplayHeader);
-resultDisplayText.appendChild(displayResultDisplay);
+resultHeader.appendChild(displayResultDisplay);
 
 
 function getComputerChoice(){
@@ -97,7 +99,7 @@ function game(){
         playRound();  //add button to activate play round. Give error when not selecting rps before.
         console.log(result);
         console.log(playerScore, compScore);
-        resultDisplayText.textContent = result;
+        displayResultDisplay.textContent = result;
         displayPlayerScore.textContent = playerScore; 
         displayCompScore.textContent = compScore;
 }
